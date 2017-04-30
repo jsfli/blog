@@ -83,3 +83,7 @@ production:
   database: alpha_blog_production
   username: alpha_blog
   password: <%= ENV['ALPHA_BLOG_DATABASE_PASSWORD'] %>
+
+# loading developement database data to Heroku
+# first run heroku pg:reset to make sure the production database is empty
+# and then run heroku pg:push alpha_blog_development DATABASE_URL
